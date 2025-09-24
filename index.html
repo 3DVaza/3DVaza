@@ -1,89 +1,154 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>3D Print Market</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="manifest" href="manifest.json">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-  <header>
-    <h1>3D Print Market</h1>
-    <nav>
-      <a href="#products">Каталог</a>
-      <a href="#about">О нас</a>
-      <a href="#contacts">Контакты</a>
-    </nav>
+  <header class="site-header">
+    <div class="container header-row">
+      <h1 class="brand">3D Print Market</h1>
+      <nav class="main-nav" aria-label="Главное меню">
+        <button class="nav-btn" id="catalogBtn">Каталог</button>
+        <a class="nav-link" href="#about">О нас</a>
+        <button class="nav-link" id="contactsBtn">Контакты</button>
+      </nav>
+    </div>
   </header>
 
-  <section class="hero">
-    <h2>Современные решения в 3D печати</h2>
-    <p>Идеи, превращённые в реальность с помощью технологий будущего</p>
-  </section>
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h2>Современные решения в 3D печати</h2>
+        <p class="lead">Идеи, превращённые в реальность — мы моделируем и печатаем готовые файлы.</p>
+      </div>
+    </section>
 
-  <section id="products">
-    <h2>Наш каталог</h2>
-    <div class="grid">
-      <div class="card">
-        <img src="https://placehold.co/400x300?text=Фигурка+робота" alt="Фигурка робота">
-        <h3>Фигурка робота</h3>
-        <p>Уникальная декоративная модель, напечатанная на 3D-принтере. Отличный подарок.</p>
+    <section id="products" class="section container">
+      <h2>Каталог</h2>
+      <p class="muted">Нажмите на товар, чтобы увидеть описание.</p>
+      <div class="grid">
+        <article class="card" data-title="Фигурка робота">
+          <img src="https://placehold.co/600x400?text=Фигурка+робота" alt="Фигурка робота">
+          <h3>Фигурка робота</h3>
+          <p>Декоративная фигурка в стиле ретро‑футуризма. Материал PLA, высота 12 см.</p>
+        </article>
+
+        <article class="card" data-title="Настольный органайзер">
+          <img src="https://placehold.co/600x400?text=Органайзер" alt="Органайзер">
+          <h3>Настольный органайзер</h3>
+          <p>Минималистичный органайзер для канцелярии и гаджетов. Прочный и лёгкий.</p>
+        </article>
+
+        <article class="card" data-title="Авторская лампа">
+          <img src="https://placehold.co/600x400?text=Лампа" alt="Лампа">
+          <h3>Авторская лампа</h3>
+          <p>Дизайнерская лампа с абажуром из биопластика. Тёплый рассеянный свет.</p>
+        </article>
+
+        <article class="card" data-title='Ваза "Геометрия"'>
+          <img src="https://placehold.co/600x400?text=Ваза" alt='Ваза "Геометрия"'> 
+          <h3>Ваза "Геометрия"</h3>
+          <p>Современная ваза с геометрическим узором. Подчеркнёт интерьер.</p>
+        </article>
+
+        <article class="card" data-title="Чехол для телефона">
+          <img src="https://placehold.co/600x400?text=Чехол" alt="Чехол для телефона">
+          <h3>Чехол для телефона</h3>
+          <p>Персонализированный чехол: можно напечатать под ваш телефон и декор.</p>
+        </article>
+
+        <article class="card" data-title="Набор шахмат">
+          <img src="https://placehold.co/600x400?text=Шахматы" alt="Набор шахмат">
+          <h3>Набор шахмат</h3>
+          <p>Эксклюзивный комплект шахматных фигур, напечатанных с высоким качеством деталей.</p>
+        </article>
       </div>
-      <div class="card">
-        <img src="https://placehold.co/400x300?text=Органайзер" alt="Органайзер">
-        <h3>Настольный органайзер</h3>
-        <p>Минималистичный органайзер для канцелярии и гаджетов. Стиль и порядок на столе.</p>
+    </section>
+
+    <section id="about" class="section alt">
+      <div class="container">
+        <h2>О нас</h2>
+        <p>Мы занимаемся 3D печатью, создаём 3D‑модели и печатаем готовые файлы под заказ. От прототипа до конечного изделия — помогаем реализовать продукт быстро и аккуратно.</p>
       </div>
-      <div class="card">
-        <img src="https://placehold.co/400x300?text=Лампа" alt="Лампа">
-        <h3>Авторская лампа</h3>
-        <p>Дизайнерская настольная лампа с абажуром из биопластика. Тёплый свет и эко-стиль.</p>
+    </section>
+
+    <section id="contacts" class="section container">
+      <h2>Контакты</h2>
+      <p class="muted">Связаться с нами можно через маркетплейс или в Telegram — кнопки ниже.</p>
+      <div class="contact-buttons">
+        <a class="btn primary" href="https://ozon.ru" target="_blank" rel="noopener">Наш магазин на Ozon</a>
+        <a class="btn secondary" href="https://t.me/your_channel" target="_blank" rel="noopener">Мы в Telegram</a>
+        <button id="installBtn" class="btn install">Установить на рабочий стол</button>
       </div>
-      <div class="card">
-        <img src="https://placehold.co/400x300?text=Ваза" alt="Ваза">
-        <h3>Ваза "Геометрия"</h3>
-        <p>Современная ваза с геометрическим узором. Лёгкая и прочная.</p>
-      </div>
-      <div class="card">
-        <img src="https://placehold.co/400x300?text=Чехол+для+телефона" alt="Чехол">
-        <h3>Чехол для телефона</h3>
-        <p>Персонализированный чехол, напечатанный под заказ. Защита и стиль в одном.</p>
-      </div>
-      <div class="card">
-        <img src="https://placehold.co/400x300?text=Шахматы" alt="Шахматы">
-        <h3>Набор шахмат</h3>
-        <p>Эксклюзивный комплект шахматных фигур, созданных на 3D-принтере.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <div class="copyright">© 2025 3D Print Market</div>
+      <div class="footer-actions">
+        <a class="btn footer-btn" href="https://ozon.ru" target="_blank" rel="noopener">Ozon</a>
+        <a class="btn footer-btn" href="https://t.me/your_channel" target="_blank" rel="noopener">Telegram</a>
+        <button id="installBtnFooter" class="btn footer-btn">Установить</button>
       </div>
     </div>
-  </section>
-
-  <section id="about">
-    <h2>О нас</h2>
-    <p>Мы занимаемся 3D печатью, создаём уникальные модели и печатаем готовые файлы. 
-       Наша цель — превратить ваши идеи в реальные изделия, сочетающие эстетику и практичность.</p>
-  </section>
-
-  <section id="contacts">
-    <h2>Контакты</h2>
-    <div class="buttons">
-      <a href="https://ozon.ru" target="_blank" class="btn">Наш магазин на Ozon</a>
-      <a href="https://t.me/your_channel" target="_blank" class="btn">Мы в Telegram</a>
-      <button id="installBtn" class="btn">Установить на рабочий стол</button>
-    </div>
-  </section>
-
-  <footer>
-    <p>© 2025 3D Print Market</p>
   </footer>
 
-  <script src="app.js"></script>
+  <!-- Product list modal (used for Catalog button) -->
+  <div id="productListModal" class="modal" aria-hidden="true">
+    <div class="modal-content">
+      <button class="modal-close" id="modalClose">✕</button>
+      <h3>Список товаров</h3>
+      <ul id="productList" class="product-list"></ul>
+    </div>
+  </div>
+
+  <script src="/app.js"></script>
   <script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/service-worker.js')
-        .then(() => console.log('✅ Service Worker зарегистрирован'))
-        .catch(err => console.log('❌ Ошибка регистрации SW:', err));
-    }
+    // smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', function(e){
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({behavior:'smooth'});
+      });
+    });
+
+    // Catalog button opens modal with product names
+    const catalogBtn = document.getElementById('catalogBtn');
+    const modal = document.getElementById('productListModal');
+    const productList = document.getElementById('productList');
+    const modalClose = document.getElementById('modalClose');
+    document.querySelectorAll('.card').forEach(card => {
+      const title = card.dataset.title || card.querySelector('h3').innerText;
+      const li = document.createElement('li');
+      li.innerText = title;
+      li.tabIndex = 0;
+      li.addEventListener('click', () => {
+        card.scrollIntoView({behavior: 'smooth', block: 'center'});
+        modal.classList.remove('open');
+      });
+      productList.appendChild(li);
+    });
+    catalogBtn.addEventListener('click', () => {
+      modal.classList.add('open');
+      modal.setAttribute('aria-hidden','false');
+    });
+    modalClose.addEventListener('click', ()=>{
+      modal.classList.remove('open');
+      modal.setAttribute('aria-hidden','true');
+    });
+
+    // Contacts button scrolls to contacts section (also focus)
+    document.getElementById('contactsBtn').addEventListener('click', (e)=>{
+      e.preventDefault();
+      document.getElementById('contacts').scrollIntoView({behavior:'smooth'});
+      // focus the install button for keyboard users
+      setTimeout(()=> document.getElementById('installBtn').focus(), 600);
+    });
   </script>
 </body>
 </html>
