@@ -1,13 +1,12 @@
-Готовый проект для Vercel. Структура:
-/index.html
-/style.css
-/app.js
-/manifest.json
-/service-worker.js
-/icons/icon-192.svg
-/icons/icon-512.svg
+# 3D Print Shop Website
 
-Инструкция:
-1) Создайте репозиторий на GitHub или используйте drag&drop в Vercel.
-2) Если используете GitHub: закоммитьте файлы и push в main/master — Vercel автоматически задеплоит.
-3) Для проверки PWA: откройте сайт в Chrome на Android. В DevTools -> Application -> Manifest проверьте иконки и кнопку Add to home screen.
+## Деплой через GitHub + Vercel
+
+1. Создайте новый репозиторий на GitHub.
+2. Загрузите все файлы из этой папки (index.html, style.css, app.js, manifest.json, service-worker.js, icons/).
+3. Сделайте commit и push.
+4. Войдите в Vercel (https://vercel.com), выберите "New Project".
+5. Подключите ваш репозиторий с GitHub.
+6. Нажмите Deploy.
+
+Сайт автоматически станет доступен по адресу yourproject.vercel.app.
