@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>3D Print Market</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
 </head>
 <body>
   <header>
@@ -59,18 +60,23 @@
 
   <section id="about">
     <h2>О нас</h2>
-    <p>Мы команда энтузиастов 3D печати. Создаём изделия, которые сочетают эстетику и практичность. 
-       Используем современные материалы и технологии, чтобы воплощать ваши идеи.</p>
+    <p>Мы занимаемся 3D печатью, создаём уникальные модели и печатаем готовые файлы. 
+       Наша цель — превратить ваши идеи в реальные изделия, сочетающие эстетику и практичность.</p>
   </section>
 
   <section id="contacts">
     <h2>Контакты</h2>
-    <p>Телефон: +7 (900) 111-22-33</p>
-    <p>Email: hello@3dmarket.ru</p>
+    <div class="buttons">
+      <a href="https://ozon.ru" target="_blank" class="btn">Наш магазин на Ozon</a>
+      <a href="https://t.me/your_channel" target="_blank" class="btn">Мы в Telegram</a>
+      <button id="installBtn" class="btn">Установить на рабочий стол</button>
+    </div>
   </section>
 
   <footer>
     <p>© 2025 3D Print Market</p>
   </footer>
+
+  <script src="app.js"></script>
 </body>
 </html>
