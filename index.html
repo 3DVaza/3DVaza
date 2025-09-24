@@ -78,5 +78,12 @@
   </footer>
 
   <script src="app.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/service-worker.js')
+        .then(() => console.log('✅ Service Worker зарегистрирован'))
+        .catch(err => console.log('❌ Ошибка регистрации SW:', err));
+    }
+  </script>
 </body>
 </html>
