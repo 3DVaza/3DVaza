@@ -30,6 +30,7 @@ body {
   background: rgba(10,10,10,0.7);
   z-index: 100;
 }
+
 .nav-link {
   text-decoration: none;
   font-weight: 500;
@@ -39,6 +40,7 @@ body {
   border-radius: 8px;
   transition: all 0.3s ease;
 }
+
 .nav-link:hover {
   color: var(--accent-gold);
   text-shadow: 0 0 8px var(--accent-neon);
@@ -51,6 +53,7 @@ h1, h2 {
   color: var(--text);
   margin: 40px 0 20px;
 }
+
 h1 { font-size: 2.6rem; }
 h2 { font-size: 1.8rem; }
 
@@ -98,62 +101,47 @@ p {
 
 .product p {
   margin: 0;
-  padding: 12px;
-  min-height: 60px;   /* одинаковая высота блока текста */
-  display: flex;
-  align-items: center; /* выравнивание текста по центру вертикально */
-  justify-content: center;
+  padding: 16px;
   color: var(--text);
   font-size: 1rem;
-  font-weight: 500;
-}
-
-/* Кнопки внизу */
-.footer-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 16px;
-  padding: 40px;
-  flex-wrap: wrap;
-}
-.footer-buttons a,
-.footer-buttons button {
-  background: rgba(255,255,255,0.05);
-  border: 1px solid var(--accent-gold);
-  color: var(--accent-gold);
-  padding: 12px 22px;
-  border-radius: 10px;
-  cursor: pointer;
-  font-weight: 500;
-  font-size: 15px;
-  backdrop-filter: blur(6px);
-  transition: all 0.4s ease;
-}
-.footer-buttons a:hover,
-.footer-buttons button:hover {
-  background: var(--accent-gold);
-  color: #000;
-  box-shadow: 0 0 12px var(--accent-gold), 0 0 20px var(--accent-neon);
+  background: rgba(255,255,255,0.02);
 }
 
 /* Анимации */
 .fade-up {
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
-}
-.fade-up.visible {
-  opacity: 1;
-  transform: translateY(0);
+  animation: fadeUp 0.8s ease forwards;
 }
 
-@media (max-width: 768px) {
-  .main-nav {
-    flex-wrap: wrap;
-    gap: 12px;
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  p, h1, h2 {
-    text-align: center;
-    padding: 0 15px;
+}
+
+/* Контакты и футер */
+footer {
+  padding: 30px;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  background: rgba(0,0,0,0.4);
+}
+
+/* === Safari compatibility fixes === */
+.main-nav {
+  -webkit-backdrop-filter: blur(10px);
+}
+
+@supports (-webkit-touch-callout: none) {
+  body {
+    background-attachment: scroll;
   }
+}
+
+.products {
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
 }
