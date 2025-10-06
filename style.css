@@ -1,3 +1,4 @@
+Влад Бадин, [06.10.2025 18:08]
 /* Luxury Tech Style */
 
 :root {
@@ -26,10 +27,12 @@ body {
   padding: 20px;
   position: sticky;
   top: 0;
+  background: rgba(10, 10, 10, 0.7);
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
-  background: rgba(10,10,10,0.7);
   z-index: 100;
 }
+
 .nav-link {
   text-decoration: none;
   font-weight: 500;
@@ -39,6 +42,7 @@ body {
   border-radius: 8px;
   transition: all 0.3s ease;
 }
+
 .nav-link:hover {
   color: var(--accent-gold);
   text-shadow: 0 0 8px var(--accent-neon);
@@ -51,6 +55,7 @@ h1, h2 {
   color: var(--text);
   margin: 40px 0 20px;
 }
+
 h1 { font-size: 2.6rem; }
 h2 { font-size: 1.8rem; }
 
@@ -67,30 +72,31 @@ p {
 .products {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 40px; /* расстояния между карточками */
-  padding: 40px;
+  gap: 20px;
+  padding: 20px;
 }
 
 .product {
-  background: rgba(255,255,255,0.03);
-  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 12px;
   overflow: hidden;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
-  flex-direction: column; /* фото сверху, текст снизу */
+  flex-direction: column;
   justify-content: space-between;
 }
 
 .product:hover {
   transform: translateY(-8px);
-  box-shadow: 0 0 20px rgba(201,160,101,0.3), 0 0 40px rgba(0,229,255,0.2);
+  box-shadow: 0 0 20px rgba(201, 160, 101, 0.3), 0 0 40px rgba(0, 229, 255, 0.2);
 }
 
 .product img {
   width: 100%;
-  height: 220px;
+  height: auto;
+  max-height: 200px;
   object-fit: cover;
   display: block;
   flex-shrink: 0;
@@ -99,9 +105,9 @@ p {
 .product p {
   margin: 0;
   padding: 12px;
-  min-height: 60px;   /* одинаковая высота блока текста */
+  min-height: 60px;
   display: flex;
-  align-items: center; /* выравнивание текста по центру вертикально */
+  align-items: center;
   justify-content: center;
   color: var(--text);
   font-size: 1rem;
@@ -116,9 +122,10 @@ p {
   padding: 40px;
   flex-wrap: wrap;
 }
+
 .footer-buttons a,
 .footer-buttons button {
-  background: rgba(255,255,255,0.05);
+  background: rgba(255, 255, 255, 0.05);
   border: 1px solid var(--accent-gold);
   color: var(--accent-gold);
   padding: 12px 22px;
@@ -126,9 +133,11 @@ p {
   cursor: pointer;
   font-weight: 500;
   font-size: 15px;
+  -webkit-backdrop-filter: blur(6px);
   backdrop-filter: blur(6px);
   transition: all 0.4s ease;
 }
+
 .footer-buttons a:hover,
 .footer-buttons button:hover {
   background: var(--accent-gold);
@@ -142,18 +151,95 @@ p {
   transform: translateY(20px);
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
+
 .fade-up.visible {
   opacity: 1;
   transform: translateY(0);
 }
 
+/* Адаптивность */
 @media (max-width: 768px) {
   .main-nav {
     flex-wrap: wrap;
     gap: 12px;
+    padding: 15px;
   }
-  p, h1, h2 {
+
+  .products {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .product img {
+    max-height: 150px;
+  }
+
+  .product p {
+    min-height: auto;
+    font-size: 0.9rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+    padding: 0 10px;
+  }
+
+  .footer-buttons {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-link {
+    width: 100%;
     text-align: center;
-    padding: 0 15px;
+    padding: 12px;
+  }
+
+  .products {
+    padding: 10px;
+  }
+
+  .product img {
+    max-height: 120px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  .footer-buttons a,
+  .footer-buttons button {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Поддержка Safari */
+@supports not (backdrop-filter: blur(10px)) {
+  .main-nav,
+  .footer-buttons a,
+  .footer-buttons button {
+-webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    background: rgba(10, 10, 10, 0.9);
   }
 }
