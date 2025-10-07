@@ -1,81 +1,331 @@
+Влад Бадин, [07.10.2025 13:32]
+/* === LUXURY TECH STYLE v2 === */
+
+:root {
+  --bg-gradient: radial-gradient(circle at 30% 30%, #222 0%, #0a0a0a 100%);
+  --accent-gold: #c9a065;
+  --accent-neon: #00e5ff;
+  --text: #f5f5f5;
+  --text-muted: #b3b3b3;
+  --font-main: 'Inter', sans-serif;
+  --font-title: 'Playfair Display', serif;
+}
+
+/* === Базовые стили === */
+body {
+  margin: 0;
+  font-family: var(--font-main);
+  background: var(--bg-gradient);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  background-attachment: fixed;
+  transition: background 0.6s ease;
+}
+
+/* === Навигация === */
+.main-nav {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  padding: 20px;
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(12px);
+  background: rgba(10,10,10,0.7);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  z-index: 100;
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.nav-link {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--text);
+  padding: 10px 18px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--accent-gold);
+  text-shadow: 0 0 8px var(--accent-neon);
+  transform: translateY(-2px);
+}
+
+/* === Заголовки и текст === */
+h1, h2 {
+  font-family: var(--font-title);
+  font-weight: 600;
+  text-align: center;
+  color: var(--text);
+  margin: 40px 0 20px;
+  animation: fadeUp 1s ease forwards;
+}
+
+h1 { font-size: 2.6rem; letter-spacing: 1px; }
+h2 { font-size: 1.8rem; }
+
+p {
+  max-width: 650px;
+  margin: 0 auto 20px;
+  line-height: 1.7;
+  font-size: 1rem;
+  color: var(--text-muted);
+  text-align: center;
+  animation: fadeUp 1.2s ease forwards;
+}
+
+/* === Каталог === */
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 40px;
+  padding: 40px;
+  animation: fadeUp 1s ease forwards;
+}
+
+.product {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 0.8s ease forwards;
+}
+
+.product:hover {
+  transform: translateY(-8px);
+  background: rgba(255,255,255,0.05);
+  box-shadow: 0 0 25px rgba(201,160,101,0.3), 0 0 40px rgba(0,229,255,0.25);
+}
+
+.product img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+  flex-shrink: 0;
+}
+
+.product p {
+  margin: 0;
+  padding: 16px;
+  color: var(--text);
+  font-size: 1rem;
+  background: rgba(255,255,255,0.02);
+}
+
+/* === Анимации === */
+.fade-up {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.8s ease forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* === Контакты и футер === */
+footer {
+  padding: 40px 20px;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  background: rgba(0,0,0,0.4);
+  animation: fadeUp 1s ease forwards;
+}
+
+/* === Соцсети / Кнопки === */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 40px 0;
+  flex-wrap: wrap;
+}
+
+.social-links a {
+  text-decoration: none;
+  background: var(--accent-gold);
+  color: #000;
+  font-weight: 600;
+  padding: 14px 28px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  box-shadow: 0 0 12px rgba(201,160,101,0.5);
+}
+
+.social-links a:hover {
+  background: var(--accent-neon);
+  color: #000;
+  box-shadow: 0 0 25px rgba(0,229,255,0.6);
+  transform: translateY(-3px);
+}
+
+/* === Кнопки Ozon / Telegram / Установить === */
+.footer-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 40px 0;
+}
+
+.footer-buttons a,
+.footer-buttons button {
+  text-decoration: none;
+  background: var(--accent-gold);
+  color: #000;
+  font-weight: 600;
+  padding: 14px 28px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(201,160,101,0.
+
+Влад Бадин, [07.10.2025 13:32]
+5);
+}
+
+.footer-buttons a:hover,
+.footer-buttons button:hover {
+  background: var(--accent-neon);
+  color: #000;
+  box-shadow: 0 0 25px rgba(0,229,255,0.7);
+  transform: translateY(-3px);
+}
+
+/* === Glow-эффект для текста === */
+.glow {
+  text-shadow: 0 0 8px var(--accent-neon), 0 0 16px var(--accent-neon);
+}
+
+/* === Safari fix === */
+@supports (-webkit-touch-callout: none) {
+  body {
+    background-attachment: scroll;
+  }
+}
+
+Влад Бадин, [07.10.2025 13:35]
 <!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>3D Print Premium</title>
+
+  <!-- Шрифты -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+
+  <!-- Стили -->
   <link rel="stylesheet" href="style.css">
   <script defer src="script.js"></script>
+
+  <!-- SEO и соцсети -->
+  <meta name="description" content="Премиальная 3D печать: модели, аксессуары и индивидуальные заказы. Высокое качество, стиль и точность.">
+  <meta property="og:title" content="3D Print Premium">
+  <meta property="og:description" content="Премиальная 3D печать: уникальные модели и аксессуары.">
+  <meta property="og:image" content="images/preview.jpg">
+  <meta property="og:type" content="website">
 </head>
+
 <body>
+  <!-- Навигация -->
   <nav class="main-nav">
     <a href="#catalog" class="nav-link">Каталог</a>
     <a href="#about" class="nav-link">О нас</a>
     <a href="#contacts" class="nav-link">Контакты</a>
   </nav>
 
-  <header>
-    <h1 class="fade-up">Премиальная 3D печать</h1>
-    <p class="fade-up">Создаём модели и печатаем готовые файлы с высочайшим качеством.</p>
+  <!-- Главный блок -->
+  <header class="fade-up">
+    <h1 class="glow">Премиальная 3D печать</h1>
+    <p>Создаём модели и печатаем готовые файлы с высочайшим качеством и вниманием к деталям.</p>
   </header>
 
-  <section id="catalog">
-    <h2 class="fade-up">Наш каталог</h2>
+  <!-- Каталог -->
+  <section id="catalog" class="fade-up">
+    <h2 class="glow">Наш каталог</h2>
     <div class="products">
-      <div class="product fade-up">
+      <div class="product" style="--i:1">
         <img src="images/item1.jpg" alt="Козырек эхолота Garmin Striker 4 PLUS (Vivid)">
         <p>Козырек эхолота Garmin Striker 4 PLUS (Vivid)</p>
       </div>
-      <div class="product fade-up">
+      <div class="product" style="--i:2">
         <img src="images/item2.jpg" alt="Защитная рамка радара Geely Atlas Pro">
         <p>Защитная рамка радара Geely Atlas Pro</p>
       </div>
-      <div class="product fade-up">
+      <div class="product" style="--i:3">
         <img src="images/item3.jpg" alt="Защитный кейс для DJI Mini 3">
         <p>Защитный кейс для DJI Mini 3</p>
       </div>
-      <div class="product fade-up">
+      <div class="product" style="--i:4">
         <img src="images/item4.jpg" alt="Подвижный ice-дракон">
         <p>Подвижный ice-дракон</p>
       </div>
-      <div class="product fade-up">
+      <div class="product" style="--i:5">
         <img src="images/item5.jpg" alt="Дефлекторы УАЗ-Patriot">
         <p>Дефлекторы УАЗ-Patriot</p>
       </div>
-      <div class="product fade-up">
+      <div class="product" style="--i:6">
         <img src="images/item6.jpg" alt="Подвижный сфинкс">
         <p>Подвижный сфинкс</p>
       </div>
-      <div class="product fade-up">
+      <div class="product" style="--i:7">
         <img src="images/item7.jpg" alt="Внутренние ручки дверей УАЗ-Patriot">
         <p>Внутренние ручки дверей УАЗ-Patriot</p>
       </div>
-      <div class="product fade-up">
+      <div class="product" style="--i:8">
         <img src="images/item8.jpg" alt="Кейс GoPro Hero 13">
         <p>Кейс GoPro Hero 13</p>
       </div>
-      <div class="product fade-up">
+      <div class="product" style="--i:9">
         <img src="images/item9.jpg" alt="Диспенсер пакетов для собак">
         <p>Диспенсер пакетов для собак</p>
       </div>
     </div>
   </section>
 
-  <section id="about">
-    <h2 class="fade-up">О нас</h2>
-    <p class="fade-up">
-      Мы специализируемся на 3D печати: создаём уникальные модели и печатаем готовые файлы 
-      с точностью и стилем. Наши работы подойдут как для бизнеса, так и для личного использования.
+  <!-- О нас -->
+  <section id="about" class="fade-up">
+    <h2 class="glow">О нас</h2>
+    <p>
+      Мы специализируемся на 3D печати: создаём уникальные модели и реализуем готовые проекты
+      с точностью и стилем. Каждый заказ — это сочетание технологий, качества и эстетики.
+      Мы используем только проверенные материалы и оборудование.
     </p>
   </section>
 
-  <section id="contacts">
-    <h2 class="fade-up">Контакты</h2>
-    <div class="footer-buttons fade-up">
-      <a href="https://www.ozon.ru/seller/zdvaza-2250950/?miniapp=seller_2250950" target="_blank">Наш Ozon</a>
-      <a href="https://t.me/World3DPrinting" target="_blank">Telegram</a>
+  <!-- Контакты -->
+  <section id="contacts" class="fade-up">
+    <h2 class="glow">Контакты</h2>
+    <div class="footer-buttons">
+      <a href="https://www.ozon.ru/seller/zdvaza-2250950/?miniapp=seller_2250950" target="_blank" rel="noopener">Наш Ozon</a>
+      <a href="https://t.me/World3DPrinting" target="_blank" rel="noopener">Telegram</a>
       <button id="installBtn">Установить</button>
     </div>
   </section>
+
+  <!-- Футер -->
+  <footer>
+    © 2025 3D Print Premium. Все права защищены.
+  </footer>
 </body>
 </html>
